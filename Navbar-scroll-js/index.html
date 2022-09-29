@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar And Scroll in HTML CSS JAVASCRIPT ONLY</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css"> 
+</head>
+<body>
+    <div id="header">
+        <h1>PROGRAMMING IS LIFE</h1></div>
+
+    <div id="navbar">
+        <a href="">HOME</a>
+        <a href="">CONTACT</a>
+        <a href="">ABOUT</a>
+        <a href="">language</a>
+        <a href="">SERVICES</a>
+        <a href="">MORE</a>
+    </div>
+
+    </div id="content">
+        <h2>8 of the Most Important HTML Tags for SEO</h2>
+        <p>Are you utilizing HTML tags in your SEO process?
+        HTML tags are code elements with the back-end of all web pages, but there are also specific HTML code types which provide search engines with key info for SERP display. Essentially, these elements highlight parts of your content that are relevant for search, and they describe those elements for search crawlers.
+        That said, you don't have to use all of these extra code tools. Search engines are getting smarter, and there's much less use for HTML tags these days than there was in times past. But a few tags are still holding on - and some have even gained in SEO value.
+        In this post, we'll go over some of the key SEO HTML tags that still make sense in 2020.</p>
+        <p>Best practices
+        On the one hand, your title should contain the keywords that will help it appear in search results. On the other, your title should be attractive enough for users to actually click through, so a balance is required between search optimization and user experience:     
+        Watch the length - Google will only display the first 50-60 characters of your title, and cut the rest. It's not a problem to have a title that’s longer than 60 characters, so long as you fit the important information before the cut-off point.​
+        Include a reasonable number of keywords - Keyword stuffing is likely to get penalized, but one or two keywords will be fine. Just make sure that your title forms a coherent sentence.​
+        Write good copy - Don’t be salesy, and don’t be generic. Create descriptive titles that highlight the value of your content, and set up proper expectations, so that users aren't let down when they visit the page.
+        Add your brand name - If you have a recognizable brand that’s likely to increase your click-through, then feel free to add it to the title as well.
+        HTML code
+        Below is a bit of code retrieved from a BBC article on coronavirus statistics. </p>
+        <p>Are you utilizing HTML tags in your SEO process?
+        HTML tags are code elements with the back-end of all web pages, but there are also specific HTML code types which provide search engines with key info for SERP display. Essentially, these elements highlight parts of your content that are relevant for search, and they describe those elements for search crawlers.
+        That said, you don't have to use all of these extra code tools. Search engines are getting smarter, and there's much less use for HTML tags these days than there was in times past. But a few tags are still holding on - and some have even gained in SEO value.
+        In this post, we'll go over some of the key SEO HTML tags that still make sense in 2020.</p>
+        <p>Best practices
+        On the one hand, your title should contain the keywords that will help it appear in search results. On the other, your title should be attractive enough for users to actually click through, so a balance is required between search optimization and user experience:
+        Watch the length - Google will only display the first 50-60 characters of your title, and cut the rest. It's not a problem to have a title that’s longer than 60 characters, so long as you fit the important information before the cut-off point.​
+        Include a reasonable number of keywords - Keyword stuffing is likely to get penalized, but one or two keywords will be fine. Just make sure that your title forms a coherent sentence.​
+        Write good copy - Don’t be salesy, and don’t be generic. Create descriptive titles that highlight the value of your content, and set up proper expectations, so that users aren't let down when they visit the page.
+        Add your brand name - If you have a recognizable brand that’s likely to increase your click-through, then feel free to add it to the title as well.
+        HTML code
+        elow is a bit of code retrieved from a BBC article on coronavirus statistics.</p> 
+    </div>
+
+    <!-- SCROLLING JAVASCRIPT USED JQUERY -->
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    
+    <script>
+        $(document).scroll(function(){
+            var documentScrollTop = $(document).scrollTop();
+            if (documentScrollTop > $('#header').height()){
+                $('#navbar').addClass('fixedTop');
+                var shiftContent = $('#navbar').height();
+                $('#content').css('margin-top', shiftContent + 'px');
+            }
+            else if ($('#header').hasClass('fixedTop')){
+                $('#navbar').removeClass('fixedTop');
+                $('#content').css('margin-top','0px');
+            }
+        });
+    </script>
+</body>
+</html>
